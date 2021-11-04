@@ -2,15 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
-.container {
-    margin: 0 auto;
-}
-
 .header-section {
     background-image: url('./images/header.jpg');
     object-fit: cover;
-    height: 450px;
+    height: 550px;
     position: relative;
 }
 
@@ -27,8 +22,7 @@
 }
 
 .logo  {
-    width: 100px;
-    height: 40px;
+    height: 100%;
     display: block;
     margin: 10px;
 }
@@ -40,7 +34,7 @@
     margin: 20px;
 }
 .header-section-navigation ul li a {
-   color: #fff;
+    color:rgb(153, 150, 150);
    text-decoration: none;
    font-family: 'Raleway';
 }
@@ -56,6 +50,7 @@
     color: #fff;
     margin: 20px;
     text-transform: uppercase;
+    font-size: 50px;
 }
 
 .header-section-content p {
@@ -75,6 +70,7 @@
     color: #fff;
     cursor: pointer;
     margin: 40px;
+    font-family: 'Raleway';
 }
 
 .row {
@@ -97,7 +93,6 @@
 
 .item p {
     color: #ccc;
-    margin: 20px;
     text-transform: none;
 }
 
@@ -113,12 +108,12 @@
 }
 
 .row-employees {
-    margin: 50px;
     display: flex;
     justify-content: space-between;
     font-family: 'Raleway';
-    width: 700px;
+    width: 900px;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .employee {
@@ -142,9 +137,26 @@
     width: 200px;
 }
 
+.employee p {
+    color: rgb(153, 150, 150);
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons span {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 1px;
+    color: #ccc;
+    padding: 6px 7px;
+    cursor: pointer;
+}
+
 .section-download {
     height: 200px;
-    width: 100%;
     text-align: center;
     margin: 40px;
     font-family: 'Raleway';
@@ -155,10 +167,13 @@
 }
 .section-download p {
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 .section-download h2 {
     margin: 15px;
     color: rgb(153, 150, 150);
+    font-weight: normal;
 }
 
 .row-footer {
@@ -170,17 +185,37 @@
     height: 200px;
     padding: 30px;
     font-family: 'Raleway';
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.row-footer .instructions {
+    flex-basis: 33.3%;
 }
 
 .row-copyright {
     background-color: rgb(66, 66, 128);
     text-align: center;
-    color: #fff;
-    height: 90px;
+    color: rgb(153, 150, 150);
+    height: 50px;
     padding: 20px;
     font-family: 'Raleway';
+    font-size: 11px;
+}
+
+.row-copyright span {
+    color: brown;
 }
 
 .instructions p {
     color:rgb(153, 150, 150)
+}
+
+.instructions-social-icons span {
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 5px;
+    padding: 6px 7px;
 }
