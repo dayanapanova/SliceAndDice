@@ -1,251 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Open+Sans:ital,wght@0,400;1,300;1,400&family=Raleway:wght@400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.header-section {
-    background-image: url('./images/header.jpg');
-    object-fit: cover;
-    position: relative;
-}
-
-.header-section-navigation {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Open Sans';
-    font-size: 13px;
-    border-bottom: 1px solid #fff;
-    border-radius: 1px;
-    padding: 15px;
-    margin: 0 auto;
-}
-
-.logo  {
-    height: 100%;
-    display: block;
-    margin: 10px;
-}
-
-.header-section-navigation ul li  {
-    list-style: none;
-    text-transform: uppercase;
-    display: inline-block;
-    margin: 20px;
-}
-.header-section-navigation ul li a {
-    color:rgb(153, 150, 150);
-   text-decoration: none;
-   font-family: 'Raleway';
-}
-
-.header-section-content {
-    text-align: center;
-    margin: 0 auto;
-    margin: 80px;
-    font-family: 'Open Sans';
-}
-
-.header-section-content h1 {
-    color: #fff;
-    margin: 20px;
-    text-transform: uppercase;
-}
-
-.header-section-content p {
-    color: #fff;
-    margin: 20px;
+body {
     font-family: 'Raleway';
 }
 
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgb(75, 75, 126);
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 24%);
+    -webkit-box-shadow: 0 0 5px 0 rgb(0 0 0 / 24%);
+    -moz-box-shadow: 0 0 5px 0 rgb(0 0 0 / 24%);
+}
+
+.header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header .header-nav ul li  {
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header .header-nav ul li a {
+    color:#fff;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .header-nav ul li a:hover {
+    color: #fff;
+}
+
+.header .logo  {
+    width: 120px;
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+.header .nav-toggle {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.header .nav-toggle .fa-times {
+    display: none;
+}
+
+.header .nav-toggle.nav-open .fa-bars {
+    display: none;
+}
+
+.header .nav-toggle.nav-open .fa-times {
+    display: block;
+}
+
+.header .header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(75, 75, 126);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.header .header-nav.nav-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    background-color: rgb(75, 75, 126);
+    margin: 0 auto;
+}
+
+.footer .footer-top {
+    padding: 30px 0 0 0;
+}
+
+.footer .col {
+    width: 100%;
+}
+
+.footer .footer-item {
+    margin-bottom: 40px;
+}
+
+.footer .footer-item h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer .footer-item p {
+    color:rgb(153, 150, 150)
+}
+
+.footer .social-icons {
+    width: 100%;
+    justify-content: center;
+}
+
+.footer-bottom {
+    background-color: rgb(66, 66, 128);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p  {
+    font-size: 12px;
+    color: rgb(153, 150, 150);
+    margin-bottom: 5px;
+}
+
+.footer-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+.footer-bottom .heart {
+    color: brown;
+}
+
+.footer-bottom a {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* INTRO SECTION */
+.intro-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.intro-section .cover-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.intro-section-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.intro-section-content h1 {
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.intro-section-content p {
+    color: #fff;
+    margin: 20px;
+    font-size: 16px;
+}
+
+
+/* FEATURES SECTION */
+.features-section {
+    padding: 100px 0 20px 0;
+}
+
+.features-section .col {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.features-section .col h4 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.features-section .col p {
+    color: #ccc;
+    text-transform: none;
+}
+
+
+/* WORK SECTION */
+.work-section {
+    padding: 0 15px;
+}
+
+.work-section .col {
+    width: 100%;
+    padding: 0;
+}
+
+.work-section .image-item {
+    height: 50vw;
+    position: relative;
+}
+
+.work-section .image-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-section .image-item .item-details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0 0 0 / 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s ease-in-out;
+    padding: 50px;
+}
+
+.work-section .image-item:hover .item-details {
+    opacity: 1;
+    visibility: visible;
+}
+
+.work-section .image-item .item-details .title {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.work-section .image-item .item-details .text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* EMPLOYEES SECTION */
+.employees-section {
+    padding: 40px 0;
+}
+
+.employees-section .col {
+    width: 100%;
+}
+
+.employees-section .employee {
+    margin-bottom: 30px
+}
+
+.employees-section .employee img {
+    display: block;
+    width: 100%;
+}
+
+.employees-section .employee h6,
+.employees-section .employee h5,
+.employees-section .employee img,
+.employees-section .employee p {
+    margin: 0 0 15px 0;
+}
+
+.employees-section .employee h6 {
+    color: rgb(175, 68, 68);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.employees-section .employee h5 {
+    font-size: 18px;
+}
+
+.employees-section .employee p {
+    color: rgb(153, 150, 150);
+}
+
+
+/* TESTIMONIALS SECTION */
+.testimonials-section .testimonial {
+    position: relative;
+}
+
+.testimonials-section .carousel {
+    height: 100vw;
+}
+
+.testimonials-section .testimonial .image {
+    width: 100%;
+    height: 50vw;
+    overflow: hidden;
+}
+
+.testimonials-section .testimonial .image img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.testimonials-section .testimonial .description {
+    width: 100%;
+    height: 50vw;
+    background-color: #513448;
+    padding: 20px;
+}
+
+.testimonials-section .testimonial .text {
+    font-family: 'Cardo';
+    color: #fff;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonials-section .testimonial .author {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+}
+
+.testimonials-section .indicators {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+}
+
+.testimonials-section .indicators li {
+    background-color: #795E71;
+    list-style: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.testimonials-section .indicators li.active {
+    background-color: #fff;
+    cursor: default;
+}
+
+.testimonials-section .indicators li:last-child {
+    margin-right: 0;
+}
+
+
+/* DOWNLOAD section */
+.download-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.download-section p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.download-section h2 {
+    margin: 15px;
+    color: rgb(153, 150, 150);
+}
+
+/* GLOBAL COMPONENTS */
 .btn {
+    display: inline-block;
     border: none;
     outline: none;
-    width: 170px;
-    height: 40px;
-    padding: 10px;
+    padding: 15px 40px;
     text-transform: uppercase;
     background-color: rgb(175, 68, 68);
     color: #fff;
     cursor: pointer;
     margin: 40px;
-    font-family: 'Raleway';
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .row {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -15px;
 }
 
-.item {
-    flex-basis: 30%;
-    text-align: center;
-    align-items: center;
-    font-family: 'Raleway';
-    text-transform: uppercase;
-}
-.item img, h4 {
-    margin: 15px;
-}
-
-.item p {
-    color: #ccc;
-    text-transform: none;
-}
-
-.row-images {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.row-images img {
-    flex-basis: 25%;
-    width: 220px;
-    margin:1px;
-}
-
-.row-employees {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Raleway';
-}
-
-.employee {
-    flex-basis: 25%;
-    text-align:start;
-}
-
-.employee h5 {
-    margin: 10px;
-    font-size: 18px;
-}
-
-.employee h6 {
-    color: rgb(175, 68, 68);
-    margin: 10px;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-.employee img {
-    width: 200px;
-}
-
-.employee p {
-    color: rgb(153, 150, 150);
+.col {
+    padding: 0 15px;
 }
 
 .social-icons {
-    margin-top: 15px;
-}
-
-.social-icons span {
-    width: 60px;
-    height: 40px;
-    border: 1px solid #ccc;
-    margin: 1px;
-    color: #ccc;
-    padding: 6px 7px;
-    cursor: pointer;
-}
-
-.section-download {
-    height: 200px;
-    text-align: center;
-    margin: 40px;
-    font-family: 'Raleway';
-} 
-
-.section-download .btn {
-    margin: 30px;
-}
-.section-download p {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-.section-download h2 {
-    margin: 15px;
-    color: rgb(153, 150, 150);
-    font-weight: normal;
-}
-
-.row-footer {
     display: flex;
-    text-align: center;
-    justify-content: space-between;
-    background-color: rgb(75, 75, 126);
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 1px solid #c7cacd;
+    color: #c7cacd;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+.social-icons.light a {
     color: #fff;
-    height: 200px;
-    padding: 30px;
-    font-family: 'Raleway';
-    margin: 0 auto;
-    font-weight: normal;
+    border: 2px solid #c7cacd;
 }
 
-.row-footer .instructions {
-    flex-basis: 33.3%;
+.carousel {
+    position: relative;
+    width: 100%;
 }
 
-.row-copyright {
-    background-color: rgb(66, 66, 128);
-    text-align: center;
-    color: rgb(153, 150, 150);
-    height: 50px;
-    padding: 20px;
-    font-family: 'Raleway';
-    font-size: 11px;
+.slides {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.row-copyright span {
-    color: brown;
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1000ms, visibility 1000ms;
 }
 
-.instructions p {
-    color:rgb(153, 150, 150)
-}
+/* TABLET RESPONSIVE */
+@media only screen and (min-width: 768px) {
+    /* FEATURES SECTION */
+    .features-section {
+        padding: 60px 0 20px 0;
+    }
 
-.instructions-social-icons span {
-    width: 80px;
-    height: 80px;
-    color: #fff;
-    border: 2px solid #fff;
-    margin: 5px;
-    padding: 6px 7px;
-}
+    .features-section .col {
+        width: 50%;
+        margin-bottom: 40px;
+    }
 
-@media only screen and (max-width: 768px) {
-    .row-footer {
+    /* WORK SECTION */
+    .work-section .col {
+        width: 50%;
+        padding: 0;
+    }
+
+    .work-section .image-item {
+        height: 40vw;
+    }
+
+    /* EMPLOYEES SECTION */
+    .employees-section {
+        padding: 60px 0;
+    }
+
+    .employees-section .employee {
+        margin-bottom: 40px;
+    }
+
+    .employees-section .col {
+        width: 50%;
+    }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials-section .testimonial {
+        display: flex;
         flex-wrap: wrap;
-        padding: 10px;
-        height: 350px;
+        height: 100%;
     }
 
-    .row-footer .instructions {
-        flex-basis: 100%;
-        margin: 10px;
+    .testimonials-section .carousel {
+        height: 400px;
     }
 
-    .section-download {
-        height:100%;
-        margin: 0 auto;
-        margin-top: 25px;
+    .testimonials-section .testimonial .image {
+        width: 50%;
+        height: auto;
     }
 
-    .row {
-        flex-wrap: wrap;
+    .testimonials-section .testimonial .description {
+        width: 50%;
+        padding: 40px;
+        height: auto;
     }
 
-    .row .item {
-        flex-basis: 100%;
-        margin: 30px;
+    .testimonials-section .testimonial .text {
+        font-size: 24px;
+        margin-bottom: 40px;
     }
 
-    .header-section-content {
-        margin: 20px;
+    .testimonials-section .testimonial .author {
+        font-size: 14px;
     }
 
-    .header-section-navigation {
+    .testimonials-section .indicators {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+    }
+}
+
+/* DESKTOP RESPONSIVE */
+@media only screen and (min-width: 1023px) {
+    /* GLOBAL COMPONENTS */
+    .container {
+        max-width: 1200px;
+    }
+
+    /* HEADER */
+    .header {
+        position: absolute;
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+
+    .header .logo  {
+        width: 180px;
+    }
+
+    .header .nav-toggle {
         display: none;
+    }
+
+    .header .header-nav {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: block;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .header-content {
+        border-bottom: 1px solid #fff;
+        padding: 35px 0;
+    }
+
+    .header .header-nav ul li  {
+        display: inline-block;
+        margin: 0 10px;
+        text-align: left;
+        width: auto;
+    }
+
+    .header .header-nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    .header .header-nav ul li a {
+        color:rgb(153, 150, 150);
+        font-size: 14px;
+    }
+
+    .header .header-nav ul li a:hover {
+        color: #fff;
+    }
+
+    /* INTRO SECTION */
+    .intro-section-content {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+
+    .intro-section-content h1 {
+        font-size: 50px;
+    }
+
+    .intro-section-content p {
+        font-size: 20px;
+    }
+
+    /* FEATURES SECTION */
+    .features-section {
+        padding: 100px 0 20px 0;
+    }
+
+    .features-section .col {
+        width: 33.333%;
+        margin-bottom: 80px;
+    }
+
+
+    /* WORK SECTION */
+    .work-section .col {
+        width: 25%;
+        padding: 0;
+    }
+
+    .work-section .image-item {
+        height: 20vw;
+    }
+
+
+    /* EMPLOYEES SECTION */
+    .employees-section {
+        padding: 80px 0;
+    }
+
+    .employees-section .employee {
+        margin-bottom: 0;
+    }
+
+    .employees-section .col {
+        width: 25%;
+    }
+
+
+    /* TESTIMONIALS SECTION */
+    .testimonials-section .testimonial .text {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-section .testimonial .author {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer .footer-top {
+        padding: 50px 0;
+    }
+
+    .footer .col {
+        width: 30%;
+    }
+
+    .footer .footer-item {
+        margin-bottom: 0;
+    }
+
+    .footer .footer-item h4 {
+        margin-bottom: 20px;
     }
 }
